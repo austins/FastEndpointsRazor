@@ -1,0 +1,14 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="watch" type="RunDotNetWatch" factoryName="RunDotNetWatch">
+    <option name="exePath" value="$PROJECT_DIR$/src/FastEndpointsRazor/bin/Debug/net8.0/FastEndpointsRazor.exe" />
+    <option name="programParameters" value="" />
+    <option name="projectFilePath" value="$PROJECT_DIR$/src/FastEndpointsRazor/FastEndpointsRazor.csproj" />
+    <option name="projectTfm" value="net8.0" />
+    <option name="restartOnRudeEditEditor" value="true" />
+    <option name="suppressBrowserRefresh" value="true" />
+    <option name="suppressHotReload" value="true" />
+    <option name="watchParameters" value="" />
+    <option name="workingDirectory" value="$PROJECT_DIR$/src/FastEndpointsRazor" />
+    <method v="2" />
+  </configuration>
+</component>

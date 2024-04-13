@@ -1,0 +1,37 @@
+﻿@inject IHostEnvironment Environment
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth">
+<head>
+    @if (Environment.IsDevelopment())
+    {
+        const string viteBaseUrl = "http://localhost:5173";
+        const string assetsBaseUrl = $"{viteBaseUrl}/Assets";
+
+        <script type="module" src="@viteBaseUrl/@@vite/client"></script>
+        <link rel="stylesheet" href="@assetsBaseUrl/app.css"/>
+        <script type="module" src="@assetsBaseUrl/app.js"></script>
+    }
+    else
+    {
+        <link rel="stylesheet" href="/assets/app.css"/>
+        <script type="module" src="/assets/app.js"></script>
+    }
+
+    <HeadOutlet/>
+</head>
+<body class="bg-gray-100">
+<div class="flex flex-col h-screen">
+    <header class="bg-gray-900 text-white">
+        <div class="container py-4">
+            <h1 class="text-xl">
+                <a href="/">FastEndpointsRazor</a>
+            </h1>
+        </div>
+    </header>
+
+    <main class="container py-4 grow">
+        @Body
+    </main>
+</div>
+</body>
+</html>
