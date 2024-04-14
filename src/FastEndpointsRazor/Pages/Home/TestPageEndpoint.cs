@@ -1,4 +1,4 @@
-﻿namespace FastEndpointsRazor.Pages.Articles;
+﻿namespace FastEndpointsRazor.Pages.Home;
 
 public sealed class TestPageEndpoint : PageEndpointWithoutRequest<TestPage>
 {
@@ -10,6 +10,9 @@ public sealed class TestPageEndpoint : PageEndpointWithoutRequest<TestPage>
 
     protected override Task HandleAsync(CancellationToken ct)
     {
-        return SendPageAsync(new Dictionary<string, object?> { { "TestParameter", "Hello, world!" } });
+        return SendPageAsync(new Dictionary<string, object?>
+        {
+            { nameof(TestPage.TestParameter), "Hello, world! This is text from the endpoint handler." }
+        });
     }
 }
